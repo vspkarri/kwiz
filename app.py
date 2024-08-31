@@ -1,10 +1,11 @@
+import os
 import streamlit as st
 from fpdf import FPDF
 from openai import OpenAI
 
 rigor_values = [1, 2, 3]
 rigor_names = ["Beginner!", "Advanced!", "Expert!"]
-api_key = "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"
+api_key = os.getenv('API_KEY')
 client = OpenAI(api_key=api_key)
 
 keywords = ["generate", "quiz", "question", "create", "give"]
